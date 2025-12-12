@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absensi Siswa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Form Absensi Siswa</h1>
+        <form id="absensiForm">
+            <label>Nama (Nama lengkap)</label>
+            <input type="text" id="nama" required>
+
+            <label for="Password">Password (Yang diberikan pihak sekolah)</label>
+            <input type="password" id="password" required>
+            
+            <label>
+            <input type="checkbox" onclick="togglePassword()">Tampilkan password
+        </label>
+             
+             <label>Kelas dan Jurusan</label>
+            <input type="text" id="kelas" required>
+
+            <label for="Email">Email (Wajib menggunakan email pelajar,contoh:Dava19982@smkn9.belajar.id)</label>
+            <input type="email" id="email" required>
+
+            <label>Tanggal</label>
+            <input type="date" id="tanggal" required>
+
+            <label for="Time">Waktu (Maksmial 7.00)</label>
+            <input type="time" id="time" max="07:00" required>
+
+            <label>Status Kehadiran:</label>
+            <select id="status" required>
+                <option value="Hadir">Hadir</option>
+                <option value="Alpha">Alpha</option>
+                <option value="Izin">Izin</option>
+                <option value="Sakit">Sakit</option>
+
+                <label for="Reset">Reset</label>
+                <input type="reset" id="reset">
+
+                <p>*Jika ada kesalahan dalam pengisian data,silahkan klik tombol reset untuk mengulangi pengisian data</p>
+            </select>
+
+            <button type="submit">ABSEN</button>
+        </form>
+
+        <h2>List Yang Sudah Mengisi Absensi</h2>
+        <table id="tabelAbsensi">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Kelas</th>
+                    <th>Tanggal</th>
+                    <th>Status</th>
+                    <th>Waktu</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data akan muncul di sini -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
